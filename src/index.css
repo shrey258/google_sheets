@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer base {
+  :root {
+    --header-height: 36px;
+    --toolbar-height: 36px;
+    --formula-bar-height: 28px;
+    --cell-height: 24px;
+    --cell-width: 100px;
+    --row-header-width: 40px;
+    --column-header-height: 24px;
+  }
+
+  body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    @apply text-gray-800 bg-white;
+  }
+}
+
+@layer components {
+  .cell {
+    @apply border border-gray-300 p-1 min-w-[var(--cell-width)] h-[var(--cell-height)] overflow-hidden whitespace-nowrap flex items-center;
+  }
+  
+  .cell-selected {
+    @apply border-2 border-blue-500 z-10;
+  }
+  
+  .cell-formula {
+    @apply bg-gray-50;
+  }
+  
+  .toolbar-button {
+    @apply p-1 rounded hover:bg-gray-200 transition-colors;
+  }
+  
+  .formula-bar {
+    @apply flex items-center border border-gray-300 h-[var(--formula-bar-height)] px-2;
+  }
+  
+  .header-cell {
+    @apply bg-gray-100 font-medium text-sm flex items-center justify-center border border-gray-300;
+  }
+  
+  .row-header {
+    @apply w-[var(--row-header-width)] h-[var(--cell-height)] flex items-center justify-center;
+  }
+  
+  .column-header {
+    @apply min-w-[var(--cell-width)] h-[var(--column-header-height)] flex items-center justify-center;
+  }
+}
