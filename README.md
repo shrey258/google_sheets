@@ -116,6 +116,52 @@ npm install
 npm run dev
 ```
 
+## Deployment
+
+### Deploying to Vercel
+
+1. **Prerequisites**
+   - A [Vercel](https://vercel.com) account
+   - [Vercel CLI](https://vercel.com/cli) installed (optional)
+
+2. **Automatic Deployment (Recommended)**
+   ```bash
+   # Login to your Vercel account
+   vercel login
+
+   # Deploy the application
+   vercel
+   ```
+
+   Or simply connect your GitHub repository to Vercel:
+   1. Go to [Vercel Dashboard](https://vercel.com/dashboard)
+   2. Click "New Project"
+   3. Import your GitHub repository
+   4. Configure project settings:
+      - Framework Preset: Vite
+      - Build Command: `npm run build`
+      - Output Directory: `dist`
+   5. Click "Deploy"
+
+3. **Environment Variables**
+   If you're using environment variables, make sure to add them in your Vercel project settings:
+   1. Go to Project Settings
+   2. Navigate to Environment Variables
+   3. Add your variables
+
+4. **Custom Domain (Optional)**
+   1. Go to Project Settings
+   2. Navigate to Domains
+   3. Add your custom domain
+   4. Follow the DNS configuration instructions
+
+5. **Monitoring**
+   - View deployment status in the Vercel Dashboard
+   - Check build logs for any issues
+   - Monitor performance analytics
+
+The application is now deployed and will automatically redeploy on every push to the main branch.
+
 ## Usage
 1. Navigate to the application in your browser
 2. Click on cells to select and edit them
